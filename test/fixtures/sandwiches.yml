@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  toast: false
+  grill: false
+  open_face: false
+  eater: one
+  bread: one
+  spread: one
+  meat: one
+  cheese: one
+  green: one
+
+two:
+  name: MyString
+  toast: false
+  grill: false
+  open_face: false
+  eater: two
+  bread: two
+  spread: two
+  meat: two
+  cheese: two
+  green: two
