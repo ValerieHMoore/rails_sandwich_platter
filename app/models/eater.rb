@@ -1,0 +1,2 @@
+class Eater < ApplicationRecord
+end
