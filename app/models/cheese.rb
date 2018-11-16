@@ -1,4 +1,4 @@
 class Cheese < ApplicationRecord
   belongs_to :eater
-  belongs_to :sandwich
+  has_many :sandwiches
 end

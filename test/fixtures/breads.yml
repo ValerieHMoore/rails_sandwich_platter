@@ -2,6 +2,10 @@
 
 one:
   name: MyString
+  eater: one
+  sandwich: one
 
 two:
   name: MyString
+  eater: two
+  sandwich: two
