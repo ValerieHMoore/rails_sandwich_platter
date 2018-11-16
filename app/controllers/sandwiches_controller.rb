@@ -4,6 +4,10 @@ class SandwichesController < ApplicationController
         @sandwich = Sandwich.new
     end
 
+    def index
+        @sandwiches = Sandwich.all
+    end
+
     private
 
     def sandwich_params
