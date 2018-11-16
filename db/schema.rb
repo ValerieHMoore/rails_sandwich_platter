@@ -10,29 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_16_162119) do
+ActiveRecord::Schema.define(version: 2018_11_16_184848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "breads", force: :cascade do |t|
     t.string "name"
-    t.bigint "eater_id"
-    t.bigint "sandwich_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["eater_id"], name: "index_breads_on_eater_id"
-    t.index ["sandwich_id"], name: "index_breads_on_sandwich_id"
   end
 
   create_table "cheeses", force: :cascade do |t|
     t.string "name"
-    t.bigint "eater_id"
-    t.bigint "sandwich_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["eater_id"], name: "index_cheeses_on_eater_id"
-    t.index ["sandwich_id"], name: "index_cheeses_on_sandwich_id"
   end
 
   create_table "eaters", force: :cascade do |t|
@@ -44,51 +36,20 @@ ActiveRecord::Schema.define(version: 2018_11_16_162119) do
 
   create_table "greens", force: :cascade do |t|
     t.string "name"
-    t.bigint "eater_id"
-    t.bigint "sandwich_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["eater_id"], name: "index_greens_on_eater_id"
-    t.index ["sandwich_id"], name: "index_greens_on_sandwich_id"
   end
 
   create_table "meats", force: :cascade do |t|
     t.string "name"
-    t.bigint "eater_id"
-    t.bigint "sandwich_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["eater_id"], name: "index_meats_on_eater_id"
-    t.index ["sandwich_id"], name: "index_meats_on_sandwich_id"
-  end
-
-  create_table "sandwiches", force: :cascade do |t|
-    t.string "name"
-    t.boolean "toast"
-    t.boolean "grill"
-    t.boolean "open_face"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "spreads", force: :cascade do |t|
     t.string "name"
-    t.bigint "eater_id"
-    t.bigint "sandwich_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["eater_id"], name: "index_spreads_on_eater_id"
-    t.index ["sandwich_id"], name: "index_spreads_on_sandwich_id"
   end
 
-  add_foreign_key "breads", "eaters"
-  add_foreign_key "breads", "sandwiches"
-  add_foreign_key "cheeses", "eaters"
-  add_foreign_key "cheeses", "sandwiches"
-  add_foreign_key "greens", "eaters"
-  add_foreign_key "greens", "sandwiches"
-  add_foreign_key "meats", "eaters"
-  add_foreign_key "meats", "sandwiches"
-  add_foreign_key "spreads", "eaters"
-  add_foreign_key "spreads", "sandwiches"
 end
