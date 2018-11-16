@@ -1,4 +1,7 @@
 class Eater < ApplicationRecord
+    
+    validates :username, presence: true
+
     has_many :sandwiches
     has many :breads, through: :sandwiches
     has many :spreads, through: :sandwiches
