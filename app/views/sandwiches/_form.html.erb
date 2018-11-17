@@ -1,0 +1,35 @@
+<%= form_for @sandwich do |f|%>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :toast %>
+  <%= f.check_box :toast %>
+</p>
+<p>
+  <%= f.label :grill %>
+  <%= f.check_box :grill %>
+</p>
+<p>
+  <%= f.label :open_face %>
+  <%= f.check_box :open_face %>
+</p>
+<p>
+  <%= f.label :spread %>
+  <%= f.text_field :spread %>
+</p>
+<p>
+  <%= f.label :meat %>
+  <%= f.text_field :meat %>
+</p>
+<p>
+  <%= f.label :cheese %>
+  <%= f.text_field :cheese %>
+</p>
+<p>
+  <%= f.label :green %>
+  <%= f.text_field :green %>
+</p>
+  <%= f.submit %>
+<% end %>
