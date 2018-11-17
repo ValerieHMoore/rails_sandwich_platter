@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   get '/grilled' => 'sandwiches#grilled'
   get '/vegan' => 'sandwiches#vegan'
   get '/vegetarian' => 'sandwiches#vegetarian'
+  get '/signin' => 'sessions#new'
+  post '/signin' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+
 end
