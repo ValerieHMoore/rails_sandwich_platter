@@ -1,5 +1,10 @@
 class SandwichesController < ApplicationController
-
+    scope :grilled, -> { where(grill: true) }
+    scope :open_faced, -> { where(open_face: true) }
+    scope :vegetarian, -> {where(meat_id: nil)}
+    scope :dairy_free, -> {where(cheese_id: nil)}
+    scope :vegan, -> {where(cheese_id: nil && meat_id: nil)}
+    
     def new
         @sandwich = Sandwich.new
     end
@@ -25,15 +30,6 @@ class SandwichesController < ApplicationController
         @sandwich = Sandwich.find_by(id: params[:id])
         @sandwich.update(sandwich_params)
         redirect_to sandwich_path(@sandwich)
-    end
-
-    def vegan
-    end
-
-    def vegetarian
-    end
-
-    def dairy_free
     end
 
     private
