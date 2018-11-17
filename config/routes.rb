@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   resources :sandwiches
   resources :eaters
 
+  get '/dairy_free' => 'sandwiches#dairy_free'
+  get '/grilled' => 'sandwiches#grilled'
+  get '/vegan' => 'sandwiches#vegan'
+  get '/vegetarian' => 'sandwiches#vegetarian'
 end
