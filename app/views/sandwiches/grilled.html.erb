@@ -1,0 +1,5 @@
+<h1>Grilled Sandwiches</h1>
+
+<%=@sandwiches.each do |sandwich|%>
+<%= render partial: 'sandwich', locals: {sandwich: @sandwich} %>
+<% end %>

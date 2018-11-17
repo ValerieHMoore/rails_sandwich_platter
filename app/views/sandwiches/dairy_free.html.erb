@@ -1,0 +1,6 @@
+<h1>Dairy-Free Sandwiches</h1>
+<h2>Note: This assumes you are omitting any optional dairy spread</h2>
+
+<%=@sandwiches.each do |sandwich|%>
+<%= render partial: 'sandwich', locals: {sandwich: @sandwich} %>
+<% end %>
