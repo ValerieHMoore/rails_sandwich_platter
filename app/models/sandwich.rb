@@ -36,4 +36,8 @@ class Sandwich < ApplicationRecord
         where(cheese_id: nil)
     end
 
+    def self.grilled
+        where(grill: true)
+    end
+
 end
