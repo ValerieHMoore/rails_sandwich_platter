@@ -24,20 +24,20 @@ class Sandwich < ApplicationRecord
         end
     end
 
-    def self.vegan
-        where(cheese_id: nil && meat_id: nil)
-    end
+    # def self.vegan
+    #     where(cheese_id: nil && meat_id: nil)
+    # end
 
-    def self.vegetarian
-        where(meat_id: nil)
-    end
+    # def self.vegetarian
+    #     where(meat_id: nil)
+    # end
 
-    def self.dairy_free
-        where(cheese_id: nil)
-    end
+    # def self.dairy_free
+    #     where(cheese_id: nil)
+    # end
 
-    def self.grilled
-        where(grill: true)
-    end
+    # def self.grilled
+    #     where(grill: true)
+    # end
 
 end
