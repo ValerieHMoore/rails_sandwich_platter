@@ -9,15 +9,22 @@ Rails.application.routes.draw do
     resources :breads, only: [:new, :index]
   end
   
-  resources :sandwiches
-  resources :eaters
-
+  
   get '/dairy_free' => 'sandwiches#dairy_free'
   get '/grilled' => 'sandwiches#grilled'
   get '/vegan' => 'sandwiches#vegan'
   get '/vegetarian' => 'sandwiches#vegetarian'
+  
   get '/signin' => 'sessions#new'
-  post '/signin' => 'sessions#create'
+  post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
+  
+  # get 'signup', to: 'users#new', as: 'signup'
+  # get 'login', to: 'sessions#new', as: 'login'
+  # get 'logout', to: 'sessions#destroy', as: 'logout'
+  
+  resources :sandwiches
+  resources :eaters
+  resources :sessions
 
 end

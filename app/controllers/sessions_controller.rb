@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         session[:eater_id] = @eater.id
         redirect_to eater_path(@eater)
       else
-        redirect_to '/signin'
+        redirect_to '/login'
       end
     end
 
