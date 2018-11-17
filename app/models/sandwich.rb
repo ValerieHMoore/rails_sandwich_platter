@@ -23,4 +23,17 @@ class Sandwich < ApplicationRecord
             errors.add(:sandwich, "You must have at least one filling to make a sandwich")
         end
     end
+
+    def self.vegan
+        where(cheese_id: nil && meat_id: nil)
+    end
+
+    def self.vegetarian
+        where(meat_id: nil)
+    end
+
+    def self.dairy_free
+        where(cheese_id: nil)
+    end
+
 end

@@ -8,6 +8,21 @@ class SandwichesController < ApplicationController
         @sandwiches = Sandwich.all
     end
 
+    def show
+    end
+
+    def edit
+    end
+
+    def vegan
+    end
+
+    def vegetarian
+    end
+
+    def dairy_free
+    end
+
     private
 
     def sandwich_params
