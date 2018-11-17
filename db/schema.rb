@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_11_16_185448) do
   create_table "eaters", force: :cascade do |t|
     t.string "name"
     t.string "password"
+    t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

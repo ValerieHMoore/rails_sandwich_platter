@@ -1,0 +1,10 @@
+<%= form_for @eater do |f| %>
+<%= f.label :name %> <br>
+<%= f.text_field :name %><br>
+<%= f.label :password %> <br>
+<%= f.text_field :password %><br>
+<label>Check box if you are a chef</label><br>
+<%= f.check_box :admin %><br>
+<%= f.submit %>
+
+<%end%>
