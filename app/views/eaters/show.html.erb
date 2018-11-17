@@ -1,0 +1,8 @@
+<% if @eater_message %>
+    <p><%= @eater_message %></p>
+<% end %>
+
+  <% if @eater.admin %>
+    <p><strong>ADMIN</strong></p>
+  <% end %>
+    <p><strong>Name:</strong> <%= @user.name %> </p>
