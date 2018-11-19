@@ -16,10 +16,26 @@ CSV.foreach(Rails.root.join("spreads.csv"), headers: true) do |row|
   end
 end
 
+puts "Importing meats..."
+CSV.foreach(Rails.root.join("meats.csv"), headers: true) do |row|
+  Meat.create! do |meat|
+    meat.id = row[0]
+    meat.name = row[1]
+  end
 end
 
-# csv_text = File.read(__dir__ + "/Sandwiches3.csv")
-# csv = CSV.parse(csv_text, :headers => true)
-# csv.each do |row|  
-# Sandwich.create(sandwich_name: row.to_hash["﻿sandwich_name"], ingredients: row.to_hash["ingredients"]) 
-# end
+puts "Importing cheeses..."
+CSV.foreach(Rails.root.join("cheeses.csv"), headers: true) do |row|
+  Cheese.create! do |cheese|
+    cheese.id = row[0]
+    cheese.name = row[1]
+  end
+end
+
+puts "Importing greens..."
+CSV.foreach(Rails.root.join("greens.csv"), headers: true) do |row|
+  Green.create! do |green|
+    green.id = row[0]
+    green.name = row[1]
+  end
+end
