@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     resources :breads, only: [:new, :index]
   end
   
-  
   get '/dairy_free' => 'sandwiches#dairy_free'
   get '/grilled' => 'sandwiches#grilled'
   get '/vegan' => 'sandwiches#vegan'
