@@ -3,6 +3,30 @@ body{
     background-size: cover;
 }
 
+.sandwich-index{
+    background-image: url("sandwich-index.jpg");
+    background-size: cover;
+}
+
+.dairy-free{
+    background-image: url("dairy-free-burger.jpg");
+    background-size: cover;
+}
+
+.grilled{
+    background-image: url("grilled-sandwich.jpg");
+    background-size: cover;
+}
+
+.vegan{
+    background-image: url("vegan-sandwich.jpg");
+    background-size: cover;
+}
+
+.vegetarian{
+    background-image: url("vegetarian-sandwich.jpg");
+    background-size: cover;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
