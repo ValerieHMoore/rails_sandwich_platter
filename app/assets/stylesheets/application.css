@@ -1,7 +1,6 @@
 body{
-    background-image: url('sandwich-index.jpg');
-    background-repeat: no-repeat;
-    background-position: left top;
+    background-image: url("sandwich-index.jpg");
+    background-size: cover;
 }
 
 /*
