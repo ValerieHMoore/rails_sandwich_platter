@@ -30,7 +30,7 @@ class SandwichesController < ApplicationController
     private
 
     def sandwich_params
-        params.require(:sandwich).permit(:name, :toast, :grill, :open_face, :bread, :spread, :meat, :cheese, :green)
+        params.require(:sandwich).permit(:name, :toast, :grill, :open_face, bread_attributes:[:name], spread_attributes:[:name], meat_attributes:[:name], cheese_attributes:[:name], green_attributes:[:name])
     end
     
 end
